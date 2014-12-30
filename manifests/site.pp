@@ -72,6 +72,31 @@ node default {
   include pgadmin3
   include iterm2::stable
   include gitx::dev
+  
+  # System settings
+  include osx::recovery_message { 'Zach Giles - HPC Admin - Mt Sinai - 602-576-4767': }
+  include osx::global::expand_save_dialog
+  include osx::global::tap_to_click
+  include osx::finder::empty_trash_securely
+  class { 'osx::dock::icon_size':
+	size => 12 
+  }
+  class { 'osx::dock::position':
+	position => 'right'
+  }
+  class { 'osx::dock::pin_position':
+	position => 'middle'
+  }
+  class { 'osx::dock::hot_corners':
+	bottom_left => "Start Screen Saver"
+  }
+  include osx::universal_access::ctrl_mod_zoom
+  include osx::universal_access::enable_scrollwheel_zoom
+  include osx::software_update::disable
+  class { 'boxen::security':
+	require_password = true,
+	screensaver_delay_sec = 1
+  }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
