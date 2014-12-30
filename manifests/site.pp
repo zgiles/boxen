@@ -72,6 +72,12 @@ node default {
   include pgadmin3
   include iterm2::stable
   include gitx::dev
+  include adium
+  include atom
+  include btsync
+  include dropbox
+  include gimp
+  include skype
   
   # System settings
   osx::recovery_message { 'Zach Giles - HPC Admin - Mt Sinai - 602-576-4767': }
