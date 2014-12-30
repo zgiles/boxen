@@ -59,3 +59,16 @@ github "xquartz",     "1.2.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+github "keepassx"
+github "dropbox"
+github "chrome"
+github "java"
+github "firefox"
+# github "vagrant"
+github "sourcetree"
+github "vmware_fusion"
+github "vlc"
+github "cyberduck"
+github "pgadmin3"
+github "iterm2"
+github "gitx"
