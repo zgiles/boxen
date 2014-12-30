@@ -74,8 +74,7 @@ node default {
   include gitx::dev
   
   # System settings
-# Broke
-#  include osx::recovery_message { 'Zach Giles - HPC Admin - Mt Sinai - 602-576-4767': }
+  osx::recovery_message { 'Zach Giles - HPC Admin - Mt Sinai - 602-576-4767': }
   include osx::global::expand_save_dialog
   include osx::global::tap_to_click
   include osx::finder::empty_trash_securely
