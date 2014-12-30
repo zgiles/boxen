@@ -68,7 +68,7 @@ node default {
   include sourcetree
   include vmware_fusion
   include vlc
-  include cyberduck
+#  include cyberduck
   include pgadmin3
   include iterm2::stable
   include gitx::dev
@@ -85,7 +85,7 @@ node default {
   include osx::global::tap_to_click
   include osx::finder::empty_trash_securely
   class { 'osx::dock::icon_size':
-	size => 12 
+	size => 24 
   }
   class { 'osx::dock::position':
 	position => 'right'
@@ -99,10 +99,10 @@ node default {
   include osx::universal_access::ctrl_mod_zoom
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::software_update::disable
-  class { 'boxen::security':
-	require_password => true,
-	screensaver_delay_sec => 1
-  }
+#  class { 'boxen::security':
+#	require_password => true,
+#	screensaver_delay_sec => 1
+#  }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
