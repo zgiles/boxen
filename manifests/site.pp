@@ -95,8 +95,8 @@ node default {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::software_update::disable
   class { 'boxen::security':
-	require_password = true,
-	screensaver_delay_sec = 1
+	require_password => true,
+	screensaver_delay_sec => 1
   }
 
   # fail if FDE is not enabled
