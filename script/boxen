@@ -155,7 +155,7 @@ end
 strap = %w(script/bootstrap --quiet --deployment --local --without development:test --no-cache)
 abort "Can't bootstrap, dependencies are outdated." unless system *strap
 strap2 = %w(rm .bundle/ruby/2.0.0/gems/boxen-2.7.0/lib/boxen/preflight/creds.rb)
-abort "Can't remove github cred.rb file to allow success" unless system *strap2
+puts "Can't remove github cred.rb file to allow success" unless system *strap2
 
 # Set up our local configuration, deps, and load path.
 
