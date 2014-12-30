@@ -74,7 +74,7 @@ node default {
   include gitx::dev
   include adium
   include atom
-  include btsync
+#  include btsync
   include dropbox
   include gimp
   include skype
